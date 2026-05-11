@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+        }
+
+
+        #time {
+            background-color: cadetblue;
+            color: white;
+            padding: 12px;
+        }
+
+        .stock {
+            background-color: burlywood;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>首頁</h1>
+
+    <a href="/bmi">計算BMI</a>
+    <br>
+
+    姓名:{{name}}
+
+    <p id="time">現在時間:{{time}}</p>
+
+    {% for stock in stocks %}
+
+    <h2 class="stock">{{stock["分類"]}}
+        <span style="color:red">{{stock["指數"]}}</span>
+    </h2>
+    {% endfor %}
+
+
+</body>
+
+</html>
